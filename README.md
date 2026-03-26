@@ -1,4 +1,3 @@
-[README.txt](https://github.com/user-attachments/files/26279745/README.txt)
 Plugin: Memoria Descriptiva
 ===================================
 
