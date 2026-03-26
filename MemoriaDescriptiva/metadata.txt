@@ -1,0 +1,37 @@
+[general]
+name=Memoria Descriptiva
+qgisMinimumVersion=3.16
+qgisMaximumVersion=3.99
+description=Genera memorias descriptivas en Word desde capas GIS. Soporta modo Atlas (una memoria por polígono).
+version=2.1
+author=Yuri Fabian Caller Cordova
+email=yuricaller@gmail.com
+
+about=Plugin para generar memorias descriptivas técnicas en formato Word (.docx) a partir de capas vectoriales de QGIS.
+
+ Características principales:
+ - Modo Atlas: genera una memoria independiente por cada polígono de la capa (ideal para series de mapas)
+ - Modo único: genera una memoria para un solo predio
+ - Extrae área y perímetro desde campos de la base de datos o los calcula desde la geometría
+ - Calcula distancias y azimuts geométricamente si no existen como atributos
+ - Detección automática de colindantes por análisis espacial
+ - Documento Word con formato profesional: texto justificado, tablas con bandas de color, encabezados jerárquicos
+ - Compatible con las normas técnicas del SERFOR (Perú)
+ - Requiere: python-docx (pip install python-docx)
+
+tracker=https://github.com/yuricaller/MemoriaDescriptiva/issues
+repository=https://github.com/yuricaller/MemoriaDescriptiva
+homepage=https://github.com/yuricaller/MemoriaDescriptiva
+
+category=Vector
+icon=icon.png
+tags=memoria descriptiva,word,atlas,linderos,coordenadas,polígono,topografía,SERFOR,Peru,predios
+
+experimental=False
+deprecated=False
+server=False
+hasProcessingProvider=False
+changelog=
+    2.1 - Modo Atlas: genera una memoria por polígono. Verificación fuente de área (BD/geometría). Nuevo ícono. Compatibilidad QGIS 3.16+.
+    2.0 - Formato Word profesional justificado. Cálculo geométrico de distancias/azimuts. Pestaña de configuración de campos. Capa de líneas opcional.
+    1.1 - Versión inicial.
