@@ -46,4 +46,4 @@ Uso:
 
 Contacto:
 ---------
-Para soporte o consultas, contacte a: usuario@example.com
+Para soporte o consultas, contacte a: yuricaller@gmail.com
