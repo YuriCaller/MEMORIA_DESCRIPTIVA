@@ -1,4 +1,4 @@
-Plugin: Memoria Descriptiva
+Plugin: Memoria Descriptiva Mejorada
 ===================================
 
 Este plugin genera una memoria descriptiva en formato Word a partir de tres capas de QGIS:
