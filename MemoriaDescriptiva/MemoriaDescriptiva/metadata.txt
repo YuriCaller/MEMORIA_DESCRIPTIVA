@@ -1,0 +1,44 @@
+[general]
+name=Memoria Descriptiva
+qgisMinimumVersion=3.16
+qgisMaximumVersion=3.99
+description=Genera memorias descriptivas en Word. Modos: polígono único, atlas completo o por selección.
+version=3.0
+author=Yuri Fabian Caller Cordova
+email=yuricaller@gmail.com
+
+about=Plugin para generar memorias descriptivas técnicas (.docx) a partir de capas vectoriales de QGIS.
+
+ TRES MODOS DE TRABAJO:
+ 1. Polígono único — genera 1 memoria para el polígono seleccionado
+ 2. Atlas completo — genera 1 memoria por CADA polígono de la capa (igual que el atlas de mapas)
+ 3. Atlas selección — genera memorias solo para los polígonos seleccionados en QGIS
+
+ La relación entre polígonos y puntos se configura por campo ID compartido
+ (ej: polígono.fid ↔ puntos.ID_Poligono). Compatible con flujo de trabajo Atlas de QGIS.
+
+ Datos extraídos de la BD (campos configurables):
+  - Área desde campo BD (Area_ha, AREA, etc.) con fallback a geometría WGS84
+  - Coordenadas, Distancias y Azimuts desde capa de puntos
+  - Nombre del propietario desde polígono
+
+ Requiere: python-docx (pip install python-docx)
+
+tracker=https://github.com/yuricaller/MemoriaDescriptiva/issues
+repository=https://github.com/yuricaller/MemoriaDescriptiva
+homepage=https://github.com/yuricaller/MemoriaDescriptiva
+
+category=Vector
+icon=icon.png
+tags=memoria descriptiva,word,atlas,linderos,coordenadas,polígono,topografía,SERFOR,Peru,predios,catastro
+
+experimental=False
+deprecated=False
+server=False
+hasProcessingProvider=False
+
+changelog=
+    3.0 - Lógica atlas reescrita: itera features reales, filtra puntos por ID_Poligono, nombre propietario en cada memoria. Tres modos: único/atlas completo/atlas selección.
+    2.1 - Modo atlas por campo identificador. Verificación fuente área. Nuevo ícono.
+    2.0 - Formato Word justificado. Cálculo geométrico. Capa líneas opcional.
+    1.1 - Versión inicial.

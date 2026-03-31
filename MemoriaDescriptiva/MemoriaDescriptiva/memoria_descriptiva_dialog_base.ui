@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MemoriaDescriptivaDialogBase</class>
+ <widget class="QDialog" name="MemoriaDescriptivaDialogBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Memoria Descriptiva Mejorada</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tabDatosBasicos">
+      <attribute name="title">
+       <string>Datos Básicos</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QGroupBox" name="groupSolicitante">
+         <property name="title">
+          <string>1. Datos del Solicitante</string>
+         </property>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblNombre">
+            <property name="text">
+             <string>Nombre completo:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="txtNombre"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblDNI">
+            <property name="text">
+             <string>DNI:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="txtDNI"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupUbicacion">
+         <property name="title">
+          <string>3. Ubicación</string>
+         </property>
+         <layout class="QFormLayout" name="formLayout_2">
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblSector">
+            <property name="text">
+             <string>Sector:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="txtSector"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblZona">
+            <property name="text">
+             <string>Zona:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="txtZona"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lblDistrito">
+            <property name="text">
+             <string>Distrito:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="txtDistrito"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="lblProvincia">
+            <property name="text">
+             <string>Provincia:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="txtProvincia"/>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="lblDepartamento">
+            <property name="text">
+             <string>Departamento:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="txtDepartamento"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupCapas">
+         <property name="title">
+          <string>Selección de Capas</string>
+         </property>
+         <layout class="QFormLayout" name="formLayout_3">
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblPoligonos">
+            <property name="text">
+             <string>Capa de Polígonos:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="cboPoligonos"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblPuntos">
+            <property name="text">
+             <string>Capa de Puntos:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="cboPuntos"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lblLineas">
+            <property name="text">
+             <string>Capa de Líneas:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="cboLineas"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupArchivo">
+         <property name="title">
+          <string>Archivo de salida</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLineEdit" name="txtOutputFile"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnBrowse">
+            <property name="text">
+             <string>Examinar...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabOpciones">
+      <attribute name="title">
+       <string>Opciones Avanzadas</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QGroupBox" name="groupColindantes">
+         <property name="title">
+          <string>4. Colindantes</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QCheckBox" name="chkDetectarColindantes">
+            <property name="text">
+             <string>Detectar colindantes automáticamente</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupColindantesManual">
+            <property name="title">
+             <string>Colindantes Manuales (si no se detectan automáticamente)</string>
+            </property>
+            <layout class="QFormLayout" name="formLayout_4">
+             <item row="0" column="0">
+              <widget class="QLabel" name="lblNorte">
+               <property name="text">
+                <string>Norte:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="txtNorte"/>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="lblSur">
+               <property name="text">
+                <string>Sur:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="txtSur"/>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="lblEste">
+               <property name="text">
+                <string>Este:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="txtEste"/>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="lblOeste">
+               <property name="text">
+                <string>Oeste:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLineEdit" name="txtOeste"/>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupOpciones">
+         <property name="title">
+          <string>Opciones de Procesamiento</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QCheckBox" name="chkCalcularAutomatico">
+            <property name="text">
+             <string>Calcular automáticamente datos faltantes</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkIncluirMapa">
+            <property name="text">
+             <string>Incluir mapa en el documento</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkIncluirTabla">
+            <property name="text">
+             <string>Incluir tabla de atributos completa</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupGeneralidades">
+         <property name="title">
+          <string>2. Generalidades</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QCheckBox" name="chkTextoDefault">
+            <property name="text">
+             <string>Usar texto predeterminado</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="txtGeneralidades">
+            <property name="html">
+             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;El presente documento constituye la Memoria Descriptiva del plano perimétrico adjunto, elaborado con el propósito de precisar los linderos, la configuración geométrica y la extensión superficial del terreno en cuestión. La información técnica aquí consignada se fundamenta en un levantamiento topográfico de campo, ejecutado mediante equipos GNSS de alta precisión, garantizando la exactitud métrica y el cumplimiento de normativas vigentes en materia de geodesia y cartografía.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Esta memoria tiene por objeto respaldar jurídica y técnicamente la delimitación del predio, sustentando su titularidad y proporcionando datos verificables para fines catastrales, registrales o administrativos, según corresponda. Asimismo, servirá como documento base para cualquier trámite legal, urbanístico o de gestión de propiedad que derive de los derechos asociados al área descrita.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabInfoTecnica">
+      <attribute name="title">
+       <string>Información Técnica</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QGroupBox" name="groupInfoMapa">
+         <property name="title">
+          <string>6. Información Técnica del Mapa</string>
+         </property>
+         <layout class="QFormLayout" name="formLayout_5">
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblSistema">
+            <property name="text">
+             <string>Sistema de coordenadas:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="txtSistema">
+            <property name="text">
+             <string>Datum WGS 84, UTM zona 19 sur</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblUnidades">
+            <property name="text">
+             <string>Unidades:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="txtUnidades">
+            <property name="text">
+             <string>Metros</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lblElipsoide">
+            <property name="text">
+             <string>Elipsoide:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="txtElipsoide">
+            <property name="text">
+             <string>WGS 84</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="lblGrillado">
+            <property name="text">
+             <string>Grillado:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="txtGrillado">
+            <property name="text">
+             <string>Cada 1000 metros</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupCampos">
+         <property name="title">
+          <string>Selección de Campos</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QLabel" name="lblInfoCampos">
+            <property name="text">
+             <string>Seleccione los campos a utilizar para cada tipo de información:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupCamposPuntos">
+            <property name="title">
+             <string>Campos de la capa de Puntos</string>
+            </property>
+            <layout class="QFormLayout" name="formLayout_6">
+             <item row="0" column="0">
+              <widget class="QLabel" name="lblCampoOrden">
+               <property name="text">
+                <string>Campo de orden:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QComboBox" name="cboCampoOrden"/>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="lblCampoID">
+               <property name="text">
+                <string>Campo de ID:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QComboBox" name="cboCampoID"/>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupCamposPoligono">
+            <property name="title">
+             <string>Campos de la capa de Polígono</string>
+            </property>
+            <layout class="QFormLayout" name="formLayout_7">
+             <item row="0" column="0">
+              <widget class="QLabel" name="lblCampoNombre">
+               <property name="text">
+                <string>Campo de nombre:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QComboBox" name="cboCampoNombre"/>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="lblCampoDNI">
+               <property name="text">
+                <string>Campo de DNI:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QComboBox" name="cboCampoDNI"/>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="btnGenerar">
+       <property name="text">
+        <string>Generar Memoria</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="button_box">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>button_box</sender>
+   <signal>accepted()</signal>
+   <receiver>MemoriaDescriptivaDialogBase</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_box</sender>
+   <signal>rejected()</signal>
+   <receiver>MemoriaDescriptivaDialogBase</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
